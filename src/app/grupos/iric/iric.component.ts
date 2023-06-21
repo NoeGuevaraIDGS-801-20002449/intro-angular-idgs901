@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IAlumnosIric } from '../alumnos-iric';
 
 @Component({
   selector: 'app-iric',
@@ -6,27 +7,37 @@ import { Component } from '@angular/core';
   styleUrls: ['./iric.component.css']
 })
 export class IricComponent {
-  alumnosIric:any[]=[
+
+  imagenWidth:number=50;
+  imagenMargin:number=2;
+  muestraImagen:boolean=true;
+  listFilter:string='';
+
+  showImagen():void{
+    this.muestraImagen=!this.muestraImagen;
+  }
+  
+  alumnosIric:IAlumnosIric[]=[
     {
       matricula:1234,
       nombre:'Ana',
       edad:23,
       correo:'ana@gmail.com',
-      foto:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fes-es%2Fbuscar%2Fmujer%2520bonita%2F&psig=AOvVaw0S6qDlwdiPwmSzf38ivF9m&ust=1686879241222000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIjihIKRxP8CFQAAAAAdAAAAABAR'
+      foto:'https://images.pexels.com/photos/2811089/pexels-photo-2811089.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       matricula:2345,
       nombre:'Angela',
       edad:23,
       correo:'angela@gmail.com',
-      foto:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cosmopolitan.com%2Fes%2Fconsejos-planes%2Ffamilia-amigos%2Fa36355656%2Ftiktok-editar-fotos%2F&psig=AOvVaw0S6qDlwdiPwmSzf38ivF9m&ust=1686879241222000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIjihIKRxP8CFQAAAAAdAAAAABAZ'
+      foto:'https://images.pexels.com/photos/2836485/pexels-photo-2836485.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       matricula:97689,
       nombre:'Diego',
       edad:23,
       correo:'diego@gmail.com',
-      foto:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gq.com.mx%2Fcuidado-personal%2Farticulo%2Fcomo-salir-guapo-en-las-fotos&psig=AOvVaw0S6qDlwdiPwmSzf38ivF9m&ust=1686879241222000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIjihIKRxP8CFQAAAAAdAAAAABAh'
+      foto:'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600'
     }
   ]
 }
